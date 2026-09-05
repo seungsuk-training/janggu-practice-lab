@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Local recordings and generated plots can be large or private.
+samples/*
+!samples/.gitkeep
+
