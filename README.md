@@ -4,6 +4,8 @@
 
 > 이 저장소에서 실제로 구현된 범위는 **Phase 0A — 장구 타격 시점(Onset) 검출**뿐입니다. 아래의 나머지 내용은 검증 결과에 따라 바뀔 수 있는 장기 연구 방향이며, 구현 완료된 제품 요구사항이 아닙니다.
 
+새 PC, WSL 또는 임시 EC2 Code Server에서 작업을 이어가려면 [Git/GitHub SSH 초기 설정](docs/github-ssh.md)을 먼저 확인하세요.
+
 ## 왜 시작했나
 
 혼자 공연을 준비할 때는 박자를 맞추는 것만으로 충분하지 않습니다. 공연 전체의 가락과 순서, 각 가락의 반복과 맺음, 다음 가락으로 넘어가는 Cue와 Transition을 기억해야 합니다. 같은 가락도 공연의 위치와 반복에 따라 Tempo, Accent, Dynamics 및 악기별 역할이 달라질 수 있습니다. 다른 악기와 합주해야 할 부분을 혼자 연습하기 어렵고, 누락·추가 타격이나 점진적인 Tempo 변화도 스스로 판단하기 어렵습니다.
@@ -14,9 +16,35 @@
 
 ## 첫 번째 Reference Performance
 
-이 프로젝트는 하나의 보편적이고 고정된 “삼도 사물놀이 정답”을 가정하지 않습니다. 첫 Reference Performance는 성남 지역 `우리소리연구회 솟대` 계열에서 김진형 사부님 등을 통해 배우고 전승·발전되어 온 **현재 단아솟동의 실제 삼도 사물놀이 공연과 연습**입니다. 향후 제공될 실제 가락보, 연습 녹음, 공연 영상과 배운 내용의 메모를 Source of Truth로 존중합니다.
+이 프로젝트는 하나의 보편적이고 고정된 “삼도 사물놀이 정답”을 가정하지 않습니다. 첫 번째 기준 공연(Reference Performance)은 성남 지역 `우리소리연구회 솟대` 계열에서 김진형 사부님 등을 통해 배우고 전승·발전되어 온 **현재 단아솟동의 실제 삼도 사물놀이 공연과 연습**입니다. 향후 제공될 실제 가락보, 연습 녹음, 공연 영상과 배운 내용의 메모를 판단의 기준이 되는 원자료(Source of Truth)로 존중합니다.
 
-중요한 외부 Reference Source로 [솟대예감TV](https://www.youtube.com/@sodo96)를 기록합니다. 링크·제목·출처·설명 등의 Metadata를 관리하는 것을 우선하며, 원본 영상을 저장소에 무단 복제하거나 재배포하지 않습니다. 현재 YouTube 수집·다운로드·분석은 구현하지 않습니다.
+## 외부 및 실제 공연 참고 자료(Reference Sources)
+
+### 솟대예감TV
+
+- 채널명: `솟대예감TV`
+- URL: <https://www.youtube.com/@sodo96>
+
+솟대 관련 연주, 공연과 교육 자료를 이해하기 위한 중요한 참고 자료(Reference Source)입니다. 향후 공연 구조, 가락, 반복, 전환(Transition), 빠르기(Tempo), 악기별 역할과 강약(Dynamics)을 사람이 확인하며 주석(Annotation)할 때 활용할 가능성을 고려합니다.
+
+현재 YouTube 수집·다운로드·자동 분석은 구현하지 않습니다. 원본 영상을 저장소에 무단 복제하거나 재배포하지 않고, URL·영상 제목·채널/제작자·출처·설명·열람일·관련 구간·권리 메모 등의 Reference Metadata를 관리하는 방식을 우선합니다.
+
+### 단아솟동의 2025 충주 경연대회 참가
+
+- 참가 영상: [2025 충주 전국 동호인 사물놀이 경연대회♡단아솟동](https://www.youtube.com/watch?v=Z4wByK9eGmE)
+- 영상 게시 채널: `농사남 -농악을 사랑하는 남자.`
+- 행사: `제12회 2025 충주 전국 동호인 사물놀이 경연대회`
+- 행사일: 2025년 9월 20일
+- 대회 소개 기사: [전국사물놀이 동호인들 충주에서 한판 벌인다!](https://www.joongwonnews.com/news/articleView.html?idxno=14024) — 중원신문, 2025년 9월 16일
+- 열람일: 2026년 9월 5일
+
+이 영상은 단아솟동이 실제 참가한 공연의 구성, 가락 순서, 빠르기, 강약, 악기별 역할과 전환을 이해하는 중요한 기준 공연 자료입니다. 영상 파일을 저장소에 복제하지 않고 URL과 관련 맥락만 기록합니다.
+
+단아솟동은 이 대회에서 수상했으나, 제공된 대회 소개 기사는 개최 전 기사여서 정확한 상명은 확인할 수 없습니다. 금상 여부를 포함한 정확한 수상 내역은 상장, 공식 결과 발표 또는 당시 기록을 확인한 뒤 확정해 기록합니다.
+
+이 영상은 현재 공연의 고정된 정답이 아니라 **2025 충주 경연대회 판본**으로 관리합니다. 현재 준비 중인 공연에서는 장구 가락 일부가 달라지고 징놀음이 추가될 가능성이 있으므로, 향후 가락보와 연습 자료에서도 2025 판본과 현재 판본을 섞지 않고 변경 구간과 공통 구간을 구분합니다.
+
+권리와 이용 범위를 확인한 뒤 필요하다면 영상에서 추출한 Audio를 공연 구간, 반복, 전환, 빠르기와 가락보 초안을 연구하는 개인 연습용 변환 자료(Derived Data)로 활용할 수 있습니다. 추출 Audio는 원본 URL·판본·추출 조건과 연결하고 공개 GitHub에 올리거나 재배포하지 않는 것을 기본 원칙으로 합니다.
 
 ## 공연과 가락을 보는 관점
 
@@ -37,18 +65,55 @@
 
 장기적으로는 사용자가 한 악기를 맡고 나머지 Part가 Reference Performance에 따라 연주되는 Virtual Samulnori Ensemble, 그리고 처음에는 현재/다음 가락·반복 횟수·Cue를 보여 주다가 안내를 줄여 가는 암기 Scaffold를 지향합니다.
 
-## 자료와 Provenance 원칙
+Audio/Video에서 Reference Score로 발전하는 과정도 완전 자동화를 전제하지 않습니다.
 
-- **Personal Practice First / Real Performance First:** 개인의 실제 공연 연습과 단아솟동 자료에서 출발합니다.
-- **Performance & Garak-centered:** 단순 박자보다 공연과 가락 구조를 중심에 둡니다.
-- **Provenance Matters:** 공연, 계열, 지도, 사용 목적, 시기, 원자료와 Version을 추적합니다.
-- **Source Material Preservation:** 원본(Source)과 변환·분석 결과(Derived)를 분리하고 원본을 덮어쓰지 않습니다.
-- **Human Authority / Human-in-the-loop:** 자동 분석보다 연주자와 사부님의 판단 및 검수를 우선합니다.
-- **Existing Standards First:** 자체 DSL보다 정간보, 구음, 기존 가락보, MusicXML, MIDI와 percussion notation 등 기존 표준을 먼저 조사합니다.
-- **Small Steps / Validate Before Build:** 실제 연습 가치가 확인된 뒤 다음 단계로 갑니다.
-- **Simple Architecture:** 현재 검증에 필요하지 않은 Framework나 추상화를 도입하지 않습니다.
+```text
+실제 Audio / Video
+        ↓
+Audio 추출과 Onset Detection
+        ↓
+악기·타격 종류와 Tempo / Beat 분석
+        ↓
+Pattern·Repeat·Transition과 공연 구조 추정
+        ↓
+가락보 초안
+        ↓
+연주자 / 사부의 검수와 수정
+        ↓
+검증된 Reference Score
+```
+
+검수 결과가 다시 기준 자료(Reference Data)가 되어 분석과 초안 품질을 개선하는 사람 주도 학습 순환(Human-guided Learning Loop)을 장기적으로 연구하되, 현재 기계학습 처리 과정(Machine Learning Pipeline)은 구축하지 않습니다.
+
+## 자료의 출처와 이력 관리(Provenance)
+
+- **개인 연습과 실제 공연 우선(Personal Practice First / Real Performance First):** 개인의 실제 공연 연습과 단아솟동 자료에서 출발합니다.
+- **공연과 가락 중심(Performance & Garak-centered):** 단순 박자보다 공연과 가락 구조를 중심에 둡니다.
+- **출처와 이력 보존(Provenance Matters):** 공연, 계열, 지도, 사용 목적, 시기, 원자료와 판본(Version)을 추적합니다.
+- **원본 자료 보존(Source Material Preservation):** 원본(Source)과 변환·분석 자료(Derived Data)를 분리하고 원본을 덮어쓰지 않습니다.
+- **사람의 판단과 검수 우선(Human Authority / Human-in-the-loop):** 자동 분석보다 실제 연주자와 사부님의 판단 및 검수를 우선합니다.
+- **기존 표준 우선(Existing Standards First):** 자체 DSL보다 정간보, 구음, 기존 가락보, MusicXML, MIDI와 타악기 표기법(Percussion Notation) 등 기존 표준을 먼저 조사합니다.
+- **작게 만들고 먼저 검증(Small Steps / Validate Before Build):** 실제 연습 가치가 확인된 뒤 다음 단계로 갑니다.
+- **단순한 구조(Simple Architecture):** 현재 검증에 필요하지 않은 Framework나 추상화를 도입하지 않습니다.
 
 실제 자료가 들어오면 먼저 원형을 보존하고 공연 구성, 가락 순서와 이름, 구음, 박/장단, Pattern, Repeat, Transition, Cue, Tempo, Dynamics, 악기별 Part, 맺음과 암기 방식을 분석합니다. 향후 `source/`와 `derived/` 분리를 검토하되, 자료 특성을 보기 전에는 디렉터리나 Schema를 확정하지 않습니다. 저작권·초상권·공유 범위를 확인하고 큰 원본 Audio/Video는 Git 대신 접근 통제된 외부 저장소와 식별자/Checksum으로 연결하는 방식을 권장합니다.
+
+아직 확정된 데이터 구조(Schema)는 아니지만, 자료의 출처와 이력(Provenance)에는 다음과 같은 맥락을 남길 필요가 있습니다.
+
+```yaml
+공연: 단아솟동 삼도 사물놀이
+계열: 솟대 관련
+지도: 김진형 사부 등
+사용: 실제 단아솟동 공연 준비
+시기: 2026
+자료:
+  - 실제 가락보
+  - 실제 연습 녹음
+  - 공연 영상
+  - 관련 Reference
+```
+
+이 예시는 현재 자료의 출처 맥락을 설명하기 위한 것이며, 구현된 데이터 형식이나 확정된 Schema가 아닙니다.
 
 ## 연구·개발 로드맵
 
@@ -78,49 +143,6 @@
 ## 현재 구현: Phase 0A
 
 Audio를 mono로 불러오고 파형(Waveform)에서 onset strength envelope를 계산한 뒤 peak를 선택합니다. 검출 시점을 초 단위로 출력하고, 원본 파형과 검출선을 비교할 수 있는 PNG를 만듭니다. AI/ML은 사용하지 않습니다.
-
-### 새 PC / 임시 Code Server에서 GitHub 준비
-
-Git 작성자 설정과 SSH 개인키는 보안상 Repository에 저장되지 않습니다. 따라서 새 PC나 새 EC2 Code Server에서는 한 번씩 설정해야 합니다. 이 프로젝트에서는 다른 Repository의 작성자 설정을 바꾸지 않도록 저장소 안에서 `--local`을 사용합니다.
-
-```bash
-git config --local user.name "Seungsuk Ryoo"
-git config --local user.email "seungsuk.training@gmail.com"
-git config --local --list
-```
-
-GitHub 계정은 `seungsuk-training`입니다. 새 환경에서 SSH 인증이 필요하면 환경마다 별도의 키를 만드는 방식을 권장합니다.
-
-```bash
-ssh-keygen -t ed25519 -C "seungsuk.training@gmail.com"
-cat ~/.ssh/id_ed25519.pub
-```
-
-출력된 **공개키(`.pub`)만** GitHub의 `Settings → SSH and GPG keys → New SSH key`에 등록하고 연결을 확인합니다.
-
-```bash
-ssh -T git@github.com
-git clone git@github.com:seungsuk-training/janggu-practice-lab.git
-```
-
-개인키인 `~/.ssh/id_ed25519`는 Git, README, 메신저 또는 공개 Cloud Storage에 올리지 않습니다. 일시적인 교육용 EC2가 사라지면 새 환경에서 새 키를 만들고 공개키를 다시 등록하는 것으로 충분합니다. 더 이상 사용하지 않는 EC2의 키는 GitHub SSH key 목록에서 삭제합니다. 오래 유지할 개인 PC의 키를 백업해야 한다면 암호화된 Password Manager나 암호화된 오프라인 저장소만 사용하고, 복호화 암호는 별도로 보관합니다.
-
-여러 GitHub 계정을 한 PC에서 사용할 때만 `~/.ssh/config`에 계정별 Host alias를 둘 수 있습니다. 이 저장소의 현재 remote처럼 `github-seungsuk-training` alias를 사용한다면 새 환경에도 다음 설정이 필요합니다.
-
-```sshconfig
-Host github-seungsuk-training
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_ed25519
-    IdentitiesOnly yes
-```
-
-```bash
-git remote set-url origin git@github-seungsuk-training:seungsuk-training/janggu-practice-lab.git
-ssh -T git@github-seungsuk-training
-```
-
-GitHub 계정이 하나뿐이면 alias 없이 `git@github.com:seungsuk-training/janggu-practice-lab.git`을 사용하는 편이 단순합니다. Repository를 clone한 뒤에는 `git remote -v`, `git config --local --list`, `ssh -T ...` 세 가지로 설정을 확인합니다.
 
 ### 설치 (Ubuntu)
 
@@ -195,7 +217,7 @@ python src/detect_onsets.py --help
 
 ## 향후 연구 과제
 
-Audio/Video에서 가락보 초안으로 발전할 때는 겹쳐 울리는 네 악기의 source separation, 궁편/채편과 타격 주법 분류, 잔향·잡음에 강한 onset, 변화하는 Tempo/박 구조 추정, 유사 Pattern과 Repeat/Transition 경계 탐색, 영상·음향 동기화, 서로 다른 전승/Version의 Provenance, 불확실성을 사람이 효율적으로 고치는 Annotation UI가 주요 난점입니다.
+Audio/Video에서 가락보 초안으로 발전할 때는 겹쳐 울리는 네 악기의 음원 분리(Source Separation), 궁편/채편과 타격 주법 분류, 잔향·잡음에 강한 타격 시점(Onset) 검출, 변화하는 빠르기(Tempo)와 박 구조 추정, 유사 Pattern과 반복·전환(Repeat/Transition) 경계 탐색, 영상·음향 동기화, 서로 다른 전승·판본(Version)의 출처와 이력(Provenance), 불확실성을 사람이 효율적으로 고치는 주석 UI(Annotation UI)가 주요 난점입니다.
 
 외부 Reference URL은 향후 별도 Metadata 파일에 URL, 채널/제작자, 제목, 게시일, 열람일, 관련 공연/구간, 사용 목적, 권리 메모를 함께 기록하는 방식을 검토합니다. 링크가 사라질 수 있으므로 원본을 무단 복제하는 대신 안정적인 ID와 필요한 범위의 연구 메모를 남깁니다.
 
